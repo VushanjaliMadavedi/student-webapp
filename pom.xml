@@ -15,6 +15,19 @@
 
     <build>
         <finalName>student-webapp</finalName>
+
+        <plugins>
+            <!-- Modern WAR plugin compatible with Java 17 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <!-- Skip web.xml requirement (optional if no web.xml) -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
